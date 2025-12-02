@@ -1,0 +1,5 @@
+embedding_model: sentence-transformers/all-MiniLM-L6-v2
+chunk_size: 20
+chunk_overlap: 5
+top_k: 5
+persist_directory: data/vector_store

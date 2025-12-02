@@ -1,3 +1,3 @@
-# SciRCA-Lab
+# ai4sci
 
-Minimal scaffold for LLM-based root cause analysis.
+LLM based scientific discovery and interpretation

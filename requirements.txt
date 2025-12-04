@@ -6,3 +6,4 @@ openai
 pyyaml
 diskcache
 aiohttp
+streamlit

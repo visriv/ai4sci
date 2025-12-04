@@ -1,5 +1,5 @@
 import streamlit as st
-from scirca.src.serve.monitor import METRICS
+from src.serve.monitor import METRICS
 
 def render_metrics():
     st.subheader("📊 Runtime Metrics")

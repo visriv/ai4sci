@@ -1,21 +1,25 @@
 import streamlit as st
-import json
-from pathlib import Path
 
-from scirca.src.serve.monitor import METRICS
+from components.metrics import render_metrics
+from components.logs import render_logs
+from components.model_registry import render_model_registry
+from components.test_inference import render_test_inference
 
-st.set_page_config(page_title="SciRCA Monitoring", layout="wide")
-st.title("📊 SciRCA Monitoring Dashboard")
+st.set_page_config(page_title="SciRCA Dashboard", layout="wide")
 
-st.subheader("Request Stats")
-st.metric("Total Requests", METRICS["requests_total"])
-st.metric("Total Errors", METRICS["errors_total"])
+st.title("🧠 SciRCA Monitoring & Ops Dashboard")
+st.markdown("Real-time monitoring • Model registry • Canary eval • Test interface")
 
-st.subheader("Latency (ms)")
-if METRICS["latency_ms"]:
-    st.line_chart(METRICS["latency_ms"])
-else:
-    st.write("No requests yet.")
+tabs = st.tabs(["📊 Metrics", "📜 Logs", "🤖 Model Registry", "🧪 Test RCA"])
 
-st.subheader("Raw Metrics")
-st.json(METRICS)
+with tabs[0]:
+    render_metrics()
+
+with tabs[1]:
+    render_logs()
+
+with tabs[2]:
+    render_model_registry()
+
+with tabs[3]:
+    render_test_inference()

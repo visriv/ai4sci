@@ -1,6 +1,6 @@
 
-# 🧠 SciRCA — LLM-Based Root Cause Analysis System  
-*A Modern Agentic AI + LLMOps Project (Task 1 of 3 in the SciIntelligence Suite)*
+# 🧠 ai4sci - reasoning and interpretation for science
+*A Modern Agentic AI + LLMOps Project *
 
 ---
 
@@ -20,7 +20,8 @@ Before jumping into research, we experiemnt and implement the tools used for age
 - **Custom monitoring layer**
 - **Streamlit operations dashboard**
 - **Dockerized deployment**
-
+- **Simulated autoscaling**
+- 
 This is **Task 1** of a 3-part AI project:
 1. **Root Cause Analysis (SciRCA) — Completed**  
 2. **ESG Intelligence (GreenDocs) — Document parsing, ESG scoring, LLM-based auditing**  
@@ -60,8 +61,7 @@ This is **Task 1** of a 3-part AI project:
 
 ---
 
-## 🔧 Tech Stack & Skills Demonstrated
-
+## 🔧 Tech Stack 
 ### **LLM / Agentic AI**
 - Tool-using LLM agent (multi-step reasoning)
 - Local inference via Ollama  
@@ -88,7 +88,14 @@ This is **Task 1** of a 3-part AI project:
 - Inference tester  
 - Latency charts  
 
+### RAGs
+
+
+### Reasoning
+TODO
+
 ---
+
 
 ## 📦 Directory Structure
 

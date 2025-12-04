@@ -4,3 +4,5 @@ chromadb
 sentence-transformers
 openai
 pyyaml
+diskcache
+aiohttp

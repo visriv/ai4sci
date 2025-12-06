@@ -189,6 +189,14 @@ curl -X POST http://localhost:8000/rca   -H "Content-Type: application/json"   -
       }'
 ```
 
+
+## Load testing via autoscaling
+```bash
+python scripts/load_test.py \
+    --api http://localhost:8000 \
+    --concurrency 50 \
+    --total 500
+```
 ---
 
 ## 🧩 Roadmap (Task 2 & 3)

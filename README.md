@@ -176,6 +176,10 @@ docker build -t scirca-api .
 docker run -p 8000:8000 scirca-api
 ```
 
+### Run dashboard
+```bash
+streamlit run dashboard/app.py
+```
 ---
 
 ## 🛠 Example API Call
@@ -196,6 +200,10 @@ python scripts/load_test.py \
     --api http://localhost:8000 \
     --concurrency 50 \
     --total 500
+```
+or (this second one has been tested
+```bash
+bash scripts/run_load_test.sh
 ```
 ---
 

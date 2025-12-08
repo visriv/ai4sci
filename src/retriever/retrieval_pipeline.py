@@ -1,5 +1,7 @@
 from dataclasses import dataclass
 from typing import List
+
+from dashboard.components import logs
 from ..utils.logger import get_logger
 from .chunker import chunk_lines
 from .embedder import Embedder
@@ -23,6 +25,9 @@ class RetrievalPipeline:
 
     def index_run(self, run_id: str, logs: List[str]):
         logger.info(f"Indexing run {run_id} with {len(logs)} log lines")
+
+        if not logs:
+            return  
 
         chunks = chunk_lines(
             logs,

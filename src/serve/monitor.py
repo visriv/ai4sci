@@ -4,12 +4,26 @@ from ..utils.logger import get_logger
 
 logger = get_logger("Monitor")
 
-# in-memory metrics for now
+
 METRICS = {
     "requests_total": 0,
     "errors_total": 0,
     "latency_ms": [],
+    "history": {
+        "timestamp": [],
+        "workers": [],
+        "backlog": [],
+        "p95_latency": []
+    }
 }
+
+def record_history(workers, backlog, p95):
+    METRICS["history"]["timestamp"].append(time.time())
+    METRICS["history"]["workers"].append(workers)
+    METRICS["history"]["backlog"].append(backlog)
+    METRICS["history"]["p95_latency"].append(p95)
+
+
 
 def monitor_request(func):
     @wraps(func)

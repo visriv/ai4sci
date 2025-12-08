@@ -7,3 +7,4 @@ pyyaml
 diskcache
 aiohttp
 streamlit
+prometheus-client
